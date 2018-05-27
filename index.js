@@ -9,8 +9,6 @@ bot.on('message', (message) => {
         msg0 = message.content.toLowerCase().replace(/!emojify /g, '');
         msg = cmd.emojiconvert(msg0);
         message.channel.send(msg);
-        bot.channels.get('449044829578723341').send(`recieved: ${message.author.username} - ${message.content}`);
-        bot.channels.get('449044829578723341').send(`Sent: ${msg}`);
         cmd.logmsg(msg, message, bot);
     }
 
